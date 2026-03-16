@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ChoVeChai — bold amber × warm cream */
+  --background:          oklch(0.974 0.010 78);
+  --foreground:          oklch(0.14 0.030 36);
+
+  --card:                oklch(1 0 0);
+  --card-foreground:     oklch(0.14 0.030 36);
+
+  --popover:             oklch(1 0 0);
+  --popover-foreground:  oklch(0.14 0.030 36);
+
+  /* Primary: rich Pi amber */
+  --primary:             oklch(0.55 0.170 46);
+  --primary-foreground:  oklch(1 0 0);
+
+  --secondary:           oklch(0.947 0.012 66);
+  --secondary-foreground: oklch(0.28 0.030 44);
+
+  --muted:               oklch(0.935 0.010 70);
+  --muted-foreground:    oklch(0.50 0.020 52);
+
+  --accent:              oklch(0.945 0.042 58);
+  --accent-foreground:   oklch(0.30 0.070 42);
+
+  --destructive:         oklch(0.545 0.222 26);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border:              oklch(0.900 0.010 68);
+  --input:               oklch(0.930 0.009 68);
+  --ring:                oklch(0.55 0.170 46);
+
+  --radius:              0.875rem;
+
+  /* Charts */
+  --chart-1: oklch(0.55 0.170 46);
+  --chart-2: oklch(0.54 0.132 184);
+  --chart-3: oklch(0.62 0.148 145);
+  --chart-4: oklch(0.67 0.145 82);
+  --chart-5: oklch(0.55 0.200 26);
+
+  /* Sidebar */
+  --sidebar:                     oklch(1 0 0);
+  --sidebar-foreground:          oklch(0.14 0.030 36);
+  --sidebar-primary:             oklch(0.55 0.170 46);
+  --sidebar-primary-foreground:  oklch(1 0 0);
+  --sidebar-accent:              oklch(0.945 0.042 58);
+  --sidebar-accent-foreground:   oklch(0.30 0.070 42);
+  --sidebar-border:              oklch(0.900 0.010 68);
+  --sidebar-ring:                oklch(0.55 0.170 46);
+
+  /* ---- Brand palette ---- */
+  --brand:             oklch(0.55 0.170 46);
+  --brand-foreground:  oklch(1 0 0);
+  --brand-soft:        oklch(0.946 0.050 58);
+  --brand-deep:        oklch(0.39 0.148 40);
+  --brand-medium:      oklch(0.47 0.158 43);
+  --brand-hover:       oklch(0.51 0.164 45);
+
+  /* Pi gold (amber-yellow) */
+  --pi-gold:           oklch(0.66 0.152 66);
+  --pi-gold-soft:      oklch(0.968 0.058 74);
+
+  /* Success green */
+  --success:           oklch(0.52 0.152 143);
+  --success-foreground: oklch(1 0 0);
+  --success-soft:      oklch(0.935 0.055 145);
+
+  /* Info blue */
+  --info:              oklch(0.54 0.145 240);
+  --info-soft:         oklch(0.940 0.048 240);
+
+  /* Warning */
+  --warning:           oklch(0.70 0.160 70);
+  --warning-soft:      oklch(0.968 0.060 74);
+
+  /* Surface layers */
+  --surface-1:   oklch(0.974 0.010 78);
+  --surface-2:   oklch(1 0 0);
+  --surface-3:   oklch(0.947 0.012 66);
+  --surface-4:   oklch(0.915 0.014 65);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background:           var(--background);
+  --color-foreground:           var(--foreground);
+  --color-card:                 var(--card);
+  --color-card-foreground:      var(--card-foreground);
+  --color-popover:              var(--popover);
+  --color-popover-foreground:   var(--popover-foreground);
+  --color-primary:              var(--primary);
+  --color-primary-foreground:   var(--primary-foreground);
+  --color-secondary:            var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:                var(--muted);
+  --color-muted-foreground:     var(--muted-foreground);
+  --color-accent:               var(--accent);
+  --color-accent-foreground:    var(--accent-foreground);
+  --color-destructive:          var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:               var(--border);
+  --color-input:                var(--input);
+  --color-ring:                 var(--ring);
+  --color-chart-1:              var(--chart-1);
+  --color-chart-2:              var(--chart-2);
+  --color-chart-3:              var(--chart-3);
+  --color-chart-4:              var(--chart-4);
+  --color-chart-5:              var(--chart-5);
+  --radius-sm:                  calc(var(--radius) - 4px);
+  --radius-md:                  calc(var(--radius) - 2px);
+  --radius-lg:                  var(--radius);
+  --radius-xl:                  calc(var(--radius) + 4px);
+  --color-sidebar:                      var(--sidebar);
+  --color-sidebar-foreground:           var(--sidebar-foreground);
+  --color-sidebar-primary:              var(--sidebar-primary);
+  --color-sidebar-primary-foreground:   var(--sidebar-primary-foreground);
+  --color-sidebar-accent:               var(--sidebar-accent);
+  --color-sidebar-accent-foreground:    var(--sidebar-accent-foreground);
+  --color-sidebar-border:               var(--sidebar-border);
+  --color-sidebar-ring:                 var(--sidebar-ring);
+
+  --color-brand:                var(--brand);
+  --color-brand-foreground:     var(--brand-foreground);
+  --color-brand-soft:           var(--brand-soft);
+  --color-brand-deep:           var(--brand-deep);
+  --color-brand-medium:         var(--brand-medium);
+  --color-brand-hover:          var(--brand-hover);
+  --color-pi-gold:              var(--pi-gold);
+  --color-pi-gold-soft:         var(--pi-gold-soft);
+  --color-success:              var(--success);
+  --color-success-foreground:   var(--success-foreground);
+  --color-success-soft:         var(--success-soft);
+  --color-info:                 var(--info);
+  --color-info-soft:            var(--info-soft);
+  --color-warning:              var(--warning);
+  --color-warning-soft:         var(--warning-soft);
+  --color-surface-1:            var(--surface-1);
+  --color-surface-2:            var(--surface-2);
+  --color-surface-3:            var(--surface-3);
+  --color-surface-4:            var(--surface-4);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+  html {
+    overscroll-behavior: none;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Bottom nav height clearance */
+  .pb-nav {
+    padding-bottom: 5.5rem;
+  }
+}
